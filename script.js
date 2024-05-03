@@ -4,6 +4,7 @@ const generateSpaceStars = (sizeStar, selector,  totalStars, duration, sparkling
         let x = Math.floor(Math.random() * 100);
         let y = Math.floor(Math.random() * 100);
 
+        points.push(`${x}vw ${y}vh 0 white, ${x}vw ${y + 100}vh 0 white`);
         /* if (!sparkling) {
             sparkling = 1 + Math.floor(Math.random() * 13);
             points.push(`${x}vw ${y}vh ${sparkling}px 1px white`)
@@ -15,8 +16,7 @@ const generateSpaceStars = (sizeStar, selector,  totalStars, duration, sparkling
         if (reddish) {
             reddish = 5 + Math.floor(Math.random() * 13);
             points.push(`${x}vw ${y}vh ${reddish}px 1px red, ${x}vw ${y + 100}vh ${reddish}px 1px red`)
-        }
-        points.push(`${x}vw ${y}vh 0 white, ${x}vw ${y + 100}vh 0 white`);
+        }  
     }
 
     const container = document.querySelector(selector);
@@ -27,6 +27,6 @@ const generateSpaceStars = (sizeStar, selector,  totalStars, duration, sparkling
 }
 
 let brillo = 1;
-generateSpaceStars("1px", ".space-1", 200, "20s", brillo, true);
-generateSpaceStars("2px", ".space-2", 30, "10s", brillo);
-generateSpaceStars("3px", ".space-3", 10, "5s", brillo);
+generateSpaceStars("1px", ".space-1", 200, "200s", brillo);
+generateSpaceStars("2px", ".space-2", 30, "150s", brillo);
+generateSpaceStars("3px", ".space-3", 10, "100s", brillo);
