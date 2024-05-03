@@ -10,3 +10,20 @@ body {
     left: 0;
     right: 0;
 }
+
+.space {
+    width: var(--size);
+    height: var(--size);
+    background-color: white;
+    box-shadow: var(--point-stars);
+    animation: moveStars var(--duration, 20s) linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100vh);
+    }
+}
